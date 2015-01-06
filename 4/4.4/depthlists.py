@@ -4,7 +4,7 @@
 
 # My first idea would be to use a stateful recursive function that adds nodes
 # to a particular list whenever it reaches a node at that depth. The recursive
-# function could do a simply depth-first traversal.
+# function could do a simple depth-first traversal.
 
 from linkedlist import LinkedList
 from listnode import ListNode
@@ -41,7 +41,6 @@ for n in [2, 6, 3, 8, 2, 9]:
 
 make_depth_lists(tree)
 print(depths)
-
 
 # This algorithm runs in O(n), where n is the number of nodes in the tree.
 # It also uses O(n) more space for the nodes in the depth lists.
