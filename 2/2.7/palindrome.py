@@ -14,8 +14,6 @@
 # pop the data off the stack to see if they match. If the stack ends
 # up empty without any mismatches, the list is a palindrome.
 
-from linkedlist import LinkedList
-
 def is_palindrome(list_):
     stack = []
     n = list_.head

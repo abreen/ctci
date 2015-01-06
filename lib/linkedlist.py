@@ -1,3 +1,5 @@
+from listnode import ListNode
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -15,7 +17,7 @@ class LinkedList:
         return s
 
     def add(self, data):
-        new_node = LinkedList.Node(data)
+        new_node = ListNode(data)
 
         if self.head:
             trav = self.head
@@ -26,10 +28,22 @@ class LinkedList:
         else:
             self.head = new_node
 
-    class Node:
-        def __init__(self, data):
-            self.data = data
-            self.next = None
+    def get(self, index):
+        """Given a zero-based index, return the data at that position."""
+        i = 0
+        trav = self.head
+        while trav:
+            if i == index:
+                return trav.data
+            i += 1
+            trav = trav.next
 
-        def __str__(self):
-            return str(self.data)
+        return None
+
+    def __len__(self):
+        i = 0
+        trav = self.head
+        while trav:
+            i += 1
+            trav = trav.next
+        return i
